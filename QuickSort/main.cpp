@@ -32,7 +32,7 @@ private:
 	static int Partition(vector<T>& SortArray, int begin, int end)
 	{
 		int pivot, left, right;
-		T temp;
+		T key;
 		left = begin;
 		right = end;
 		pivot = (int)((begin + end) / 2.0);	//배열의 중앙의 위치의 값을 pivot으로 설정
@@ -42,9 +42,9 @@ private:
 			while ((SortArray[right] >= SortArray[pivot]) && (left < right)) { right--; }	// right는 왼쪽 이동 <<
 			if (left < right) // left와 right 원소를 자리 교체, left와 right가 교차하지 않음
 			{
-				temp = SortArray[left];
+				key = SortArray[left];
 				SortArray[left] = SortArray[right];
-				SortArray[right] = temp;
+				SortArray[right] = key;
 				if (left == pivot)// left가 pivot인 경우 변경된 위치를 저장한다.
 				{
 					pivot = right;
@@ -52,9 +52,9 @@ private:
 			}
 		}
 		//만약 left와 right가 같은 경우, right원소와 pivot 위치 교환
-		temp = SortArray[pivot];
+		key = SortArray[pivot];
 		SortArray[pivot] = SortArray[right];
-		SortArray[right] = temp;
+		SortArray[right] = key;
 		// 정렬되어 확정된 피봇의 위치 반환
 		return right;
 	}

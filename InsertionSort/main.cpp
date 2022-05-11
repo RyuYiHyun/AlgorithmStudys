@@ -11,7 +11,7 @@ public:
 	{
 		int i;// i는 1에서 부터 시작, 반복값
 		int j;// j는 i의 왼쪽 부분 탐색 값
-		int key;// 정렬 하려는 값
+		T key;// 정렬 하려는 값
 
 		///* for문 2개를 이용한 방법
 		for (i = 1; i < arraySize; i++)

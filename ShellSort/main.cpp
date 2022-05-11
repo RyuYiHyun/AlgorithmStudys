@@ -23,7 +23,7 @@ private:
 	static void IntervalSort(vector<T>& SortArray, int begin, int end, int interval)// 일정 간격으로 부분집합으로 삽입정렬 수행
 	{
 		int i, j;
-		int key;
+		T key;
 		// 삽입정령에서 i는 0의 다음인 1부터, 여기서는 begin의 다음인 begin + interval 부터 시작
 		for (i = begin + interval; i <= end; i = i + interval)
 		{
