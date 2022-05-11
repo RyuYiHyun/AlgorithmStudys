@@ -4,7 +4,7 @@
 using namespace std;
 
 template <typename T>
-class CBubbleSort // 셀 정렬
+class CBubbleSort // 버블 정렬
 {
 public:
 	static void BubbleSortFunction(vector<T>& SortArray, int arraySize)
